@@ -1,0 +1,2 @@
+- flash.each do |type, msg|
+  = content_tag :div, raw(msg), :id => "flash_#{type}" if msg.is_a?(String)

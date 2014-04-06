@@ -1,0 +1,7 @@
+.small-3.columns.left
+  .small-12.columns.thumbnail= link_to image_tag(button.screenshot.thumb.url), button_path(button.id)  
+  .small-12.columns= link_to button.title, button_path(button.id)
+  .small-12.columns
+    %em 
+      by
+      = link_to button.user.name

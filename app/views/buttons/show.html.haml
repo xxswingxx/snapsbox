@@ -1,0 +1,36 @@
+- content_for :header do
+  %h1
+    %small Button
+    = @button.title
+
+.row.main-content
+  .small-9.columns
+    = link_to image_tag(@button.screenshot), @button.url, target: '_blank'
+  .small-3.columns.text-left#sidebar
+    %h3 Button Info:
+    %ul 
+      %li
+        %strong URL:
+        = link_to(@button.url, @button.url, rel: 'external')
+      %li
+        %strong Description:
+        = @button.description
+      %li
+        %strong Posted by:
+        = raw " #{link_to(@button.user.name)} at #{@button.created_at}"
+      %hr
+      %ul.inline-list
+        %li= link_to 'Edit', edit_button_path(@button)
+        %li= link_to 'Destroy', @button, :confirm => 'Are you sure?', :method => :delete
+        %li= link_to 'Back', buttons_path
+
+#comments= render partial: 'comment', collection: @button.comments, as: :comment
+
+.row#comment_form
+  %b Write a comment
+  .small-12.small-centered
+    = simple_form_for Comment.new, url: button_comments_path(@button) do |f|
+      
+      = f.input_field :body
+      = f.submit 'Post comment'
+  

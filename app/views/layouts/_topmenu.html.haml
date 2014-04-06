@@ -1,0 +1,16 @@
+%p
+  Hi
+  =current_user.name
+  !
+  %br
+  Team: 
+  =current_user.team.id
+  ( 
+  = current_user.team.name
+  )
+  %br
+  Team members:
+  =current_user.team.users.count
+%ul
+  %li Profile
+  %li= link_to "Invite", new_user_invitation_path

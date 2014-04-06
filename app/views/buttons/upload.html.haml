@@ -1,0 +1,24 @@
+%h2 Import buttons
+- if @results
+  %p
+    = check_box_tag "selection_trigger", "all", true
+    %label{for: "selection_trigger"}= "Select all"
+
+  = form_tag "#{buttons_path}/import" do
+    %table.bookmarks
+      - @results.each_with_index do |r, index|
+        %tr
+          %td
+            = check_box_tag "selection[]", index, true, id: index
+            = hidden_field_tag "urls[]", r[:url]
+            = hidden_field_tag "titles[]", r[:title]
+          %td< 
+            %label{for: "#{index}"}= r[:title]
+          %td<
+            %a{href: "#{r[:url]}"}= r[:url]
+    = submit_tag
+
+= form_tag "#{buttons_path}/upload", multipart: true do
+  %label{for: "bookmark"} Upload your bookmarks file!
+  = file_field_tag 'bookmark'
+  = submit_tag

@@ -1,0 +1,23 @@
+= simple_form_for @button ||= Button.new do |f|
+  .row.right
+    .small-12.columns
+      
+      .row
+        .small-3.columns
+          %label.right(for="right-label") URL
+        .small-9.columns
+          = f.input_field :url
+
+      .row
+        .small-3.columns
+          %label.right(for="right-label") Title
+        .small-9.columns
+          = f.input_field :title
+
+      .row
+        .small-3.columns
+          %label.right(for="right-label") Text
+        .small-9.columns
+          = f.input_field :description, as: :text 
+    
+  = f.submit 'Save', class: 'button'

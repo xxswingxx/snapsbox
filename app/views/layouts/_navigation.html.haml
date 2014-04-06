@@ -1,0 +1,24 @@
+#nav-bar.fixed
+  .row
+    %nav.top-bar{"data-topbar" => ""}
+      %ul.title-area
+        %li.name
+          %h1=link_to 'Buttonbox', root_path, class: 'app-logo'
+        -  if current_user
+          %li.toggle-topbar.menu-icon
+            %a{href: "#"}
+      -  if current_user
+        %section.top-bar-section
+          / Right Nav Section
+          %ul.right          
+            %li.has-dropdown
+              = link_to( "Hi, #{current_user.name}")
+              %ul.dropdown
+                %li= link_to("Profile", edit_user_registration_path)
+                %li= link_to "Invite", new_user_invitation_path
+                %li= link_to("Logout", destroy_user_session_path, :method => :delete) 
+            %li.has-dropdown
+              = link_to 'Button actions', '#'
+              %ul.dropdown
+                %li= link_to 'Create Button', new_button_path
+                %li= link_to 'Import Button', upload_buttons_path

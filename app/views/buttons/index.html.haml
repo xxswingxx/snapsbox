@@ -1,0 +1,10 @@
+- content_for :header do
+  %h1.title Share designs you like
+  %h4.subtitle or not
+
+.row.buttons-row
+  = render partial: 'button', collection: @buttons, as: :button
+
+- unless @buttons.last_page?
+  .row#next_page_link
+    .large-12.columns#next_page= link_to_next_page(@buttons, 'Show more', remote: true, params: params, class: 'button') 

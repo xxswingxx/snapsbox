@@ -1,0 +1,50 @@
+#nav-bar {
+  background-color: #333;
+}
+.row.header {
+    h1{
+      color: #fff;
+    }
+    h4{
+      color: #fff;
+    }
+}
+
+.thumbnail {
+  padding-bottom: 20px
+}
+#main-content {
+  padding-top: 50px; 
+}
+header{
+  padding-top: 67px;
+  padding-bottom: 22px;
+  background-image: url('/assets/header_gradient_blue.jpg');
+  background-size: cover;
+  height: 500;
+}
+.alternative {
+  text-decoration: none;
+  &:visited {
+  	color: #fff;
+  }
+  background-color: #43ac6a;
+  &:hover {
+  	background-color: #008000;
+  }
+}
+
+#next_page_link {
+  padding-top: 50px;
+}
+
+.buttons-row{
+  padding-bottom: 30px;
+}
+
+#comments{
+  padding-top: 90px;
+}
+#comment_form {
+  padding-top: 50px;
+}
