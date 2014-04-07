@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Buttonbox::Application.load_tasks
+Snapsbox::Application.load_tasks

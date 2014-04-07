@@ -10,14 +10,14 @@
 #     - <Heroku config:var name>: <Heroku config:var value>
 #
 production: 
-  app: buttonbox
+  app: snapsbox
   stack: cedar
   config:
     BUNDLE_WITHOUT: "development:test"
-    MONGOHQ_URL: "mongodb://buttonbox:34fmU8tV@alex.mongohq.com:10044/buttonbox"
+    MONGOHQ_URL: "mongodb://snapsbox:34fmU8tV@alex.mongohq.com:10044/snapsbox"
 
 staging:
-  app: buttonbox-staging
+  app: snapsbox-staging
   stack: cedar
   config: &default
     BUNDLE_WITHOUT: "development:test"

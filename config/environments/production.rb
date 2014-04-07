@@ -1,4 +1,4 @@
-Buttonbox::Application.configure do
+Snapsbox::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -72,9 +72,9 @@ Buttonbox::Application.configure do
     :user_name => ENV["MANDRILL_USERNAME"],
     :password  => ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'buttonbox.herokuapp.com', # your domain to identify your server when connecting
+    :domain => 'snapsbox.herokuapp.com', # your domain to identify your server when connecting
   }
-  config.action_mailer.default_url_options = { :host => 'http://buttonbox.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'http://snapsbox.herokuapp.com' }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).

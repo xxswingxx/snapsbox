@@ -1,4 +1,4 @@
-Buttonbox::Application.routes.draw do
+Snapsbox::Application.routes.draw do
   devise_for :users
 
   get 'buttons/upload' => 'buttons#upload', as: :upload_buttons
