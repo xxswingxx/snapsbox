@@ -8,8 +8,8 @@
     = javascript_include_tag "vendor/modernizr"
     = csrf_meta_tags
   %body
-    #alerts= render 'layouts/alerts' 
     = render 'layouts/navigation'
+    #alerts= render 'layouts/alerts' 
     %header
       .row.header
         .large-12.columns= yield :header

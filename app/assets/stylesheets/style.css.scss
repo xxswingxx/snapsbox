@@ -1,6 +1,10 @@
-body { background-color: #efefef; }
+#alerts{
+  padding-top: 45px;
+  .alert-box {
+    margin-bottom: 0rem;
+  }
+} 
 
-#main-content { background-color: white; }
 #nav-bar {
   background-color: #333;
 }
