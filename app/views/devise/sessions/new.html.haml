@@ -3,13 +3,9 @@
 
 = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   .row
-    .small-5.columns.small-centered
+    .small-4.columns
       = f.input :email 
-  .row
-    .small-5.columns.small-centered
       = f.input :password, :required => true
-  .row
-    .small-5.columns.small-centered
       = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
       = f.submit "Sign in", class: 'button small'
 
