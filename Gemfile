@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'carrierwave'
+gem 'carrierwave-dropbox', github: 'robin850/carrierwave-dropbox'
 gem 'devise'
 gem 'devise_invitable'
+gem 'dropbox'
 gem 'haml-rails'
 gem 'imgkit'
 gem 'inherited_resources'

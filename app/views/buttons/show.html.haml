@@ -24,13 +24,14 @@
         %li= link_to 'Destroy', @button, :confirm => 'Are you sure?', :method => :delete
         %li= link_to 'Back', buttons_path
 
-#comments= render partial: 'comment', collection: @button.comments, as: :comment
+.row.comments
+  .small-12.columns.small-centered#comments
+    = render partial: 'comment', collection: @button.comments, as: :comment
 
 .row#comment_form
   %b Write a comment
-  .small-12.small-centered
-    = simple_form_for Comment.new, url: button_comments_path(@button) do |f|
-      
+  = simple_form_for Comment.new, url: button_comments_path(@button) do |f|
+    .small-8.columns.small-centered
       = f.input_field :body
-      = f.submit 'Post comment'
-  
+      = f.submit 'Post comment', class: 'button small'
+    

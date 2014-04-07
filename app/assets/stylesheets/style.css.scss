@@ -1,3 +1,6 @@
+body { background-color: #efefef; }
+
+#main-content { background-color: white; }
 #nav-bar {
   background-color: #333;
 }
@@ -47,4 +50,13 @@ header{
 }
 #comment_form {
   padding-top: 50px;
+}
+.row.comment{
+  text-align: left;
+  backckground: #f9f9f9 !important;
+}
+
+.date em{
+  font-size: 0.8em;
+  color: grey;
 }
